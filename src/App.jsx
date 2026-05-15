@@ -163,7 +163,7 @@ function NavBar({ onNavigate }) {
 
         {/* Desktop links */}
         <div className="jeff-nav-links" style={{ display: "flex", alignItems: "center", gap: 36 }}>
-          {[["services", "What We Offer"], ["about", "About"], ["contact", "Contact"]].map(([page, label]) => (
+          {[["services","What We Offer"],["about","About"],["contact","Contact"]].map(([page, label]) => (
             <button key={page} onClick={() => nav(page)} style={{
               color: "rgba(255,255,255,0.82)", background: "none", border: "none",
               fontSize: 14, fontWeight: 500, letterSpacing: "0.04em",
@@ -191,9 +191,9 @@ function NavBar({ onNavigate }) {
         >
           {menuOpen
             ? <span style={{ color: "#fff", fontSize: 22, lineHeight: 1 }}>✕</span>
-            : [0, 1, 2].map(i => (
-              <span key={i} style={{ display: "block", width: 24, height: 2, background: "#fff", borderRadius: 2 }} />
-            ))
+            : [0,1,2].map(i => (
+                <span key={i} style={{ display: "block", width: 24, height: 2, background: "#fff", borderRadius: 2 }} />
+              ))
           }
         </button>
       </nav>
@@ -213,7 +213,7 @@ function NavBar({ onNavigate }) {
             fontFamily: "'DM Sans', sans-serif",
           }}
         >
-          {[["services", "What We Offer"], ["about", "About"], ["contact", "Contact"]].map(([page, label]) => (
+          {[["services","What We Offer"],["about","About"],["contact","Contact"]].map(([page, label]) => (
             <button key={page} onClick={() => nav(page)} style={{
               color: "rgba(255,255,255,0.82)", background: "none", border: "none",
               fontSize: 16, fontWeight: 500, cursor: "pointer",
@@ -283,7 +283,7 @@ function HeroSection({ onNavigate }) {
         borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 44,
         flexWrap: "wrap", justifyContent: "center",
       }}>
-        {[["5+", "Years Experience"], ["1yr", "Install Warranty"], ["3", "Cities Served"], ["0", "Hidden Fees"]].map(([num, label]) => (
+        {[["5+","Years Experience"],["1yr","Install Warranty"],["3","Cities Served"],["0","Hidden Fees"]].map(([num, label]) => (
           <div key={label} style={{ textAlign: "center" }}>
             <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 34, color: "#c9973a", lineHeight: 1, marginBottom: 6 }}>{num}</div>
             <div style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", letterSpacing: "0.05em" }}>{label}</div>
@@ -296,9 +296,9 @@ function HeroSection({ onNavigate }) {
 
 // ─── Services Cards ───────────────────────────────────────────────────────────
 const servicesData = [
-  { tag: "Homeowners", title: "Standard Installation", description: "Designed for single buyers — whether installing one appliance or an entire home setup.", image: "/images/General2.webp", items: ["Professional appliance installation", "Testing and verification included", "On-time, reliable service"] },
-  { tag: "Builders & Realtors", title: "Multi-Family Installation", description: "Targeted for developers, realtors, and property managers needing bulk installation services.", image: "/images/General5.webp", items: ["Competitive bulk pricing", "On-site measuring", "No hidden fees"] },
-  { tag: "Custom", title: "Custom Services", description: "Contact us for a free quote on specialty or non-standard installations. Whether your project involves built-in appliances, waterline or drain extensions, venting modifications, custom panels, or unique installation requirements, we can review the details and provide a solution tailored to your setup.", image: "/images/General.webp", items: ["Custom quotes for specialty installations", "Standard and built-in appliance solutions", "Guidance on additional requirements and modifications", "Competitive pricing with professional workmanship"], footer: "Send us your model numbers or a few photos, and we'll help get you sorted." },
+  { tag: "Homeowners", title: "Standard Installation", description: "Designed for single buyers — whether installing one appliance or an entire home setup.", image: "/images/Dishwasher.webp", items: ["Professional appliance installation","Testing and verification included","On-time, reliable service"] },
+  { tag: "Builders & Realtors", title: "Multi-Family Installation", description: "Targeted for developers, realtors, and property managers needing bulk installation services.", image: "/images/Washer-and-Dryer-Stacked.webp", items: ["Competitive bulk pricing","On-site measuring","No hidden fees"] },
+  { tag: "Custom", title: "Custom Services", description: "Contact us for a free quote on specialty or non-standard installations. Whether your project involves built-in appliances, waterline or drain extensions, venting modifications, custom panels, or unique installation requirements, we can review the details and provide a solution tailored to your setup.", image: "/images/Fridge.webp", items: ["Custom quotes for specialty installations","Standard and built-in appliance solutions","Guidance on additional requirements and modifications","Competitive pricing with professional workmanship"], footer: "Send us your model numbers or a few photos, and we'll help get you sorted." },
 ]
 
 function ServicesCards({ onNavigate }) {
@@ -323,7 +323,7 @@ function ServicesCards({ onNavigate }) {
                 <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                   {s.items.map((item) => (
                     <li key={item} style={{ fontSize: 14, color: "#1c2b3a", padding: "5px 0 5px 22px", position: "relative" }}>
-                      <svg width="14" height="14" viewBox="0 0 14 14" style={{ position: "absolute", left: 0, top: "50%", transform: "translateY(-50%)" }}><polyline points="2,7 5.5,10.5 12,3.5" fill="none" stroke="#c9973a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                      <svg width="14" height="14" viewBox="0 0 14 14" style={{ position: "absolute", left: 0, top: "50%", transform: "translateY(-50%)" }}><polyline points="2,7 5.5,10.5 12,3.5" fill="none" stroke="#c9973a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       {item}
                     </li>
                   ))}
@@ -387,7 +387,7 @@ function HowItWorks({ onNavigate }) {
           className="jeff-hiw-img"
           src="/images/General.webp"
           alt="Completed kitchen appliance installation in Edmonton"
-          loading="lazy" style={{ width: "100%", height: 480, objectFit: "cover", borderRadius: 12, display: "block" }}
+          loading="lazy"          style={{ width: "100%", height: 480, objectFit: "cover", borderRadius: 12, display: "block" }}
         />
 
         {/* Right — accordion */}
@@ -430,7 +430,7 @@ function HowItWorks({ onNavigate }) {
 }
 
 // ─── What We Install ──────────────────────────────────────────────────────────
-const installTags = ["Dishwashers", "Over-range Microwaves", "Wall Ovens", "Gas & Electric Ranges", "Cooktops", "Hood Fans", "Refrigerators", "Washers & Dryers", "Panel Appliances"]
+const installTags = ["Dishwashers","Over-range Microwaves","Wall Ovens","Gas & Electric Ranges","Cooktops","Hood Fans","Refrigerators","Washers & Dryers","Panel Appliances"]
 
 const allInstallPhotos = [
   "/images/General.webp",
@@ -512,7 +512,7 @@ function PhotoGallery() {
 
 // ─── About Page ───────────────────────────────────────────────────────────────
 function AboutPage() {
-  const whyItems = ["Professional, detail-oriented team", "On-time, reliable service", "Skilled with modern and smart appliances", "Customer-first approach", "Competitive, transparent pricing"]
+  const whyItems = ["Professional, detail-oriented team","On-time, reliable service","Skilled with modern and smart appliances","Customer-first approach","Competitive, transparent pricing"]
   const heroText = useReveal("reveal", 0)
   const bodyLeft = useReveal("reveal-left", 0)
   const bodyRight = useReveal("reveal-right", 150)
@@ -547,7 +547,7 @@ function AboutPage() {
         <div style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: "#c9973a", marginBottom: 14 }}>Where We Work</div>
         <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 36, color: "#0d1b2a", marginTop: 12, marginBottom: 32 }}>Serving Alberta & BC</h2>
         <div style={{ display: "flex", justifyContent: "center", gap: 20, flexWrap: "wrap" }}>
-          {["Edmonton, AB", "Calgary, AB", "Kelowna, BC"].map((city) => (
+          {["Edmonton, AB","Calgary, AB","Kelowna, BC"].map((city) => (
             <div key={city} style={{ background: "#ffffff", border: "1px solid #ddd8d0", padding: "14px 30px", borderRadius: 40, fontSize: 16, fontWeight: 500, color: "#0d1b2a", display: "flex", alignItems: "center", gap: 8 }}>
               {city}
             </div>
@@ -644,11 +644,11 @@ function ContactPage() {
             ) : (
               <>
                 <div className="jeff-form-row" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 20 }}>
-                  {[["First Name", "firstName", "John"], ["Last Name", "lastName", "Smith"]].map(([label, name, ph]) => (
+                  {[["First Name","firstName","John"],["Last Name","lastName","Smith"]].map(([label, name, ph]) => (
                     <div key={name}><label style={labelStyle}>{label}</label><input type="text" name={name} placeholder={ph} value={form[name]} onChange={handleChange} style={inputStyle} /></div>
                   ))}
                 </div>
-                {[["Email Address", "email", "you@example.com", "email"], ["Phone Number", "phone", "(780) 000-0000", "tel"]].map(([label, name, ph, type]) => (
+                {[["Email Address","email","you@example.com","email"],["Phone Number","phone","(780) 000-0000","tel"]].map(([label, name, ph, type]) => (
                   <div key={name} style={{ marginBottom: 20 }}><label style={labelStyle}>{label}</label><input type={type} name={name} placeholder={ph} value={form[name]} onChange={handleChange} style={inputStyle} /></div>
                 ))}
                 <div style={{ marginBottom: 20 }}>
@@ -685,9 +685,9 @@ function ContactPage() {
 // ─── Services Page ────────────────────────────────────────────────────────────
 function ServicesPage({ onNavigate }) {
   const rows = [
-    { tag: "Homeowners", title: "Standard Installation", description: "Designed for single buyers, whether installing one appliance or multiple. We handle setup, testing, and verification — all in one visit.", image: "/images/Genera2.webp", items: ["Professional appliance installation", "Testing and verification of every install", "On-time, reliable service", "No hidden fees"], reverse: false },
-    { tag: "Builders · Realtors · Property Managers", title: "Multi-Family Installation", description: "From 3-suite townhouses to 550+ unit towers, our team has successfully delivered countless kitchen installations across Western Canada.", image: "/images/General5.webp", items: ["Competitive bulk pricing", "On-site measuring and scoping", "No hidden fees — ever"], reverse: true },
-    { tag: "Specialty", title: "Built-In, Panel Appliance & Bundle Packages", description: "When Jeff's Installation installs the appliance and the panels together, you get that flawless seamless look — done right by professionals.", image: "/images/General.webp", items: ["Custom panel installs", "Microwave trim kits", "Corner cabinet dishwasher setup", "Seamless flush-fit finishes", "Built-in fridges"], reverse: false },
+    { tag: "Homeowners", title: "Standard Installation", description: "Designed for single buyers, whether installing one appliance or multiple. We handle setup, testing, and verification — all in one visit.", image: "/images/General.webp", items: ["Professional appliance installation","Testing and verification of every install","On-time, reliable service","No hidden fees"], reverse: false },
+    { tag: "Builders · Realtors · Property Managers", title: "Multi-Family Installation", description: "From 3-suite townhouses to 550+ unit towers, our team has successfully delivered countless kitchen installations across Western Canada.", image: "/images/Washer-and-Dryer-Stacked.webp", items: ["Competitive bulk pricing","On-site measuring and scoping","No hidden fees — ever"], reverse: true },
+    { tag: "Specialty", title: "Built-In, Panel Appliance & Bundle Packages", description: "When Jeff's Installation installs the appliance and the panels together, you get that flawless seamless look — done right by professionals.", image: "/images/General3.webp", items: ["Custom panel installs","Microwave trim kits","Corner cabinet dishwasher setup","Seamless flush-fit finishes","Built-in fridges"], reverse: false },
   ]
   return (
     <div style={{ fontFamily: "'DM Sans', sans-serif" }}>
@@ -702,25 +702,43 @@ function ServicesPage({ onNavigate }) {
       <div style={{ background: "#ffffff", padding: "100px 5%" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           {rows.map((s, i) => {
-            const textBlock = (
-              <div key="text">
-                <div style={{ fontSize: 14, fontWeight: 600, color: "#c9973a", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 8 }}>{s.tag}</div>
-                <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 30, color: "#0d1b2a", marginBottom: 14, marginTop: 0 }}>{s.title}</h2>
-                <p style={{ fontSize: 16, color: "#6b7c8d", lineHeight: 1.75, marginBottom: 22, marginTop: 0 }}>{s.description}</p>
-                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                  {s.items.map((item) => (
-                    <li key={item} style={{ fontSize: 14, color: "#1c2b3a", padding: "5px 0 5px 22px", position: "relative" }}>
-                      <svg width="14" height="14" viewBox="0 0 14 14" style={{ position: "absolute", left: 0, top: "50%", transform: "translateY(-50%)" }}><polyline points="2,7 5.5,10.5 12,3.5" fill="none" stroke="#c9973a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )
-            const imgBlock = <img key="img" src={s.image} alt={s.title} style={{ width: "100%", height: 320, objectFit: "cover", borderRadius: 10, display: "block" }} />
             return (
               <div key={s.title} className="jeff-service-row" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center", padding: "60px 0", borderBottom: i < rows.length - 1 ? "1px solid #ddd8d0" : "none" }}>
-                {s.reverse ? [textBlock, imgBlock] : [imgBlock, textBlock]}
+                {s.reverse ? (
+                  <>
+                    <div>
+                      <div style={{ fontSize: 14, fontWeight: 600, color: "#c9973a", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 8 }}>{s.tag}</div>
+                      <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 30, color: "#0d1b2a", marginBottom: 14, marginTop: 0 }}>{s.title}</h2>
+                      <p style={{ fontSize: 16, color: "#6b7c8d", lineHeight: 1.75, marginBottom: 22, marginTop: 0 }}>{s.description}</p>
+                      <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                        {s.items.map((item) => (
+                          <li key={item} style={{ fontSize: 14, color: "#1c2b3a", padding: "5px 0 5px 22px", position: "relative" }}>
+                            <svg width="14" height="14" viewBox="0 0 14 14" style={{ position: "absolute", left: 0, top: "50%", transform: "translateY(-50%)" }}><polyline points="2,7 5.5,10.5 12,3.5" fill="none" stroke="#c9973a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <img src={s.image} alt={s.title} style={{ width: "100%", height: 320, objectFit: "cover", borderRadius: 10, display: "block" }} />
+                  </>
+                ) : (
+                  <>
+                    <img src={s.image} alt={s.title} style={{ width: "100%", height: 320, objectFit: "cover", borderRadius: 10, display: "block" }} />
+                    <div>
+                      <div style={{ fontSize: 14, fontWeight: 600, color: "#c9973a", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 8 }}>{s.tag}</div>
+                      <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 30, color: "#0d1b2a", marginBottom: 14, marginTop: 0 }}>{s.title}</h2>
+                      <p style={{ fontSize: 16, color: "#6b7c8d", lineHeight: 1.75, marginBottom: 22, marginTop: 0 }}>{s.description}</p>
+                      <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                        {s.items.map((item) => (
+                          <li key={item} style={{ fontSize: 14, color: "#1c2b3a", padding: "5px 0 5px 22px", position: "relative" }}>
+                            <svg width="14" height="14" viewBox="0 0 14 14" style={{ position: "absolute", left: 0, top: "50%", transform: "translateY(-50%)" }}><polyline points="2,7 5.5,10.5 12,3.5" fill="none" stroke="#c9973a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </>
+                )}
               </div>
             )
           })}
@@ -774,7 +792,7 @@ function Footer({ onNavigate }) {
         {/* Pages */}
         <div>
           <h4 style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#c9973a", marginBottom: 18, marginTop: 0 }}>Pages</h4>
-          {[["home", "Home"], ["services", "What We Offer"], ["about", "About"], ["contact", "Contact"]].map(([page, label]) => (
+          {[["home","Home"],["services","What We Offer"],["about","About"],["contact","Contact"]].map(([page, label]) => (
             <button key={page} onClick={() => onNavigate(page)} style={{
               display: "block", fontSize: 14, color: "rgba(255,255,255,0.5)",
               background: "none", border: "none", cursor: "pointer",
@@ -986,7 +1004,7 @@ function PriceCard({ cat, isSelected, toggleItem, setDetailModal }) {
               style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "13px 18px", borderBottom: idx < cat.items.length - 1 ? "1px solid #f0ece6" : "none", cursor: "pointer", background: sel ? "rgba(201,151,58,0.06)" : "#ffffff", transition: "background 0.15s" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 <div style={{ width: 19, height: 19, borderRadius: 4, flexShrink: 0, border: sel ? "2px solid #c9973a" : "2px solid #ddd8d0", background: sel ? "#c9973a" : "#ffffff", display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.15s" }}>
-                  {sel && <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="1,5 3.5,8 9,2" fill="none" stroke="#fff" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>}
+                  {sel && <svg width="10" height="10" viewBox="0 0 10 10"><polyline points="1,5 3.5,8 9,2" fill="none" stroke="#fff" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/></svg>}
                 </div>
                 <span style={{ fontSize: 14, color: "#1c2b3a", fontWeight: sel ? 600 : 400, lineHeight: 1.4 }}>{item.label}</span>
               </div>
@@ -1099,7 +1117,7 @@ function BookPage({ onNavigate }) {
           Select your services below and submit a booking request — we'll confirm pricing and scheduling with you directly.
         </p>
         <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap", marginBottom: 32 }}>
-          {["Fully Insured", "1-Year Warranty", "Trusted by Builders", "Same-Day Available"].map((label) => (
+          {["Fully Insured","1-Year Warranty","Trusted by Builders","Same-Day Available"].map((label) => (
             <div key={label} style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 40, padding: "7px 16px", fontSize: 13, color: "rgba(255,255,255,0.85)", fontWeight: 500 }}>{label}</div>
           ))}
         </div>
@@ -1248,7 +1266,7 @@ function BookPage({ onNavigate }) {
               <div style={{ marginBottom: 14 }}>
                 <label style={labelStyle}>Upload a photo (optional)</label>
                 <label style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8, border: "2px dashed #ddd8d0", borderRadius: 8, padding: "28px 20px", cursor: "pointer", background: "#f8f5f0", textAlign: "center" }}>
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9aabb8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21,15 16,10 5,21" /></svg>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9aabb8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
                   <span style={{ fontSize: 13, color: "#9aabb8" }}>{photoFile ? photoFile.name : "Click to upload or drag and drop"}</span>
                   <input type="file" accept="image/*" style={{ display: "none" }} onChange={(e) => setPhotoFile(e.target.files?.[0] || null)} />
                 </label>
@@ -1262,7 +1280,7 @@ function BookPage({ onNavigate }) {
                 {loading ? "Sending..." : "Submit Request"}
               </button>
               <div style={{ display: "flex", alignItems: "flex-start", gap: 10, marginTop: 14, padding: "12px 14px", background: "#f8f5f0", borderRadius: 8 }}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9aabb8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 1 }}><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9aabb8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 1 }}><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                 <p style={{ fontSize: 12, color: "#9aabb8", margin: 0, lineHeight: 1.6 }}>Payment is not required at this stage. We'll confirm details, pricing, and scheduling with you.</p>
               </div>
             </div>
@@ -1313,7 +1331,7 @@ function BookPage({ onNavigate }) {
                 {detailModal.includes.map((inc) => (
                   <li key={inc} style={{ fontSize: 15, color: "#1c2b3a", padding: "7px 0 7px 24px", borderBottom: "1px solid #f0ece6", position: "relative" }}>
                     <svg width="14" height="14" viewBox="0 0 14 14" style={{ position: "absolute", left: 0, top: "50%", transform: "translateY(-50%)" }}>
-                      <polyline points="2,7 5.5,10.5 12,3.5" fill="none" stroke="#c9973a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <polyline points="2,7 5.5,10.5 12,3.5" fill="none" stroke="#c9973a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                     {inc}
                   </li>
