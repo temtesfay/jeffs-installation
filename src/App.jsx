@@ -1378,7 +1378,7 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
-  return (
+  return ( 
     <div lang="en" style={{ fontFamily: "'DM Sans', sans-serif" }}>
       <NavBar onNavigate={navigate} />
       <main style={{ paddingTop: 70 }}>
